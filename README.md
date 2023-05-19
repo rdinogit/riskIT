@@ -13,7 +13,7 @@ Two approaches were implemented for the problem:
 - a `regular expressions` based solution
 - a `string manipulation` based solution
 
-As it will be explained on the following section, separate interfaces were created to facilitate showcases (i.e. so one or the other could be injected without the need to change configuration).
+As it will be explained in the [api showcase section](#api-showcase), separate interfaces were created to facilitate showcases (i.e. so one or the other could be injected without the need to change configuration).
 
 The `IWordFrequencyFactory` was introduced to allow modification of the implementation for `IWordFrequency` without impacting the several `IWordFrequencyAnalyzer` implementations.
 
