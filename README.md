@@ -2,7 +2,7 @@
 May 2023  
 Ruben Bernardino
 
-**The proposed solution to the use case is presented in the `WordAnalyzer` project and its corresponding `WordAnalyzer.Tests` project.**
+**The proposed solution to the use case is presented in the `WordAnalyzer` project and its corresponding `WordAnalyzer.Tests` project. The relevant classes are `WordFrequencyAnalyzerStringProvider` and `WordFrequencyAnalyzerRegexProvider`.**
 
 **Additionally, a showcase project `Api` and a Benchmark project `WordAnalyzer.Benchmark` are included and do not interfere with the proposed use case solution.**
 
