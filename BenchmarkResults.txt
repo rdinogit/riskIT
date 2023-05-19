@@ -1,0 +1,28 @@
+// * Summary *
+
+|                             Method |      Mean |    Error |   StdDev |
+|----------------------------------- |----------:|---------:|---------:|
+|    Regex_CalculateHighestFrequency | 156.94 us | 1.224 us | 1.085 us |
+|   String_CalculateHighestFrequency |  71.27 us | 0.591 us | 0.553 us |
+|    Regex_CalculateFrequencyForWord |  23.84 us | 0.075 us | 0.066 us |
+|   String_CalculateFrequencyForWord |  40.70 us | 0.430 us | 0.403 us |
+|  Regex_CalculateMostFrequentNWords | 175.39 us | 1.406 us | 1.247 us |
+| String_CalculateMostFrequentNWords |  92.75 us | 0.551 us | 0.430 us |
+
+// * Hints *
+Outliers
+  WordFrequencyAnalyzerRegexProviderVsWordFrequencyAnalyzerStringProvider.Regex_CalculateHighestFrequency: Default    -> 1 outlier  was  removed (164.24 us)
+  WordFrequencyAnalyzerRegexProviderVsWordFrequencyAnalyzerStringProvider.Regex_CalculateFrequencyForWord: Default    -> 1 outlier  was  removed (24.11 us)
+  WordFrequencyAnalyzerRegexProviderVsWordFrequencyAnalyzerStringProvider.Regex_CalculateMostFrequentNWords: Default  -> 1 outlier  was  removed (181.56 us)
+  WordFrequencyAnalyzerRegexProviderVsWordFrequencyAnalyzerStringProvider.String_CalculateMostFrequentNWords: Default -> 3 outliers were removed (94.27 us..97.32 us)
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  1 us   : 1 Microsecond (0.000001 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:01:46 (106.75 sec), executed benchmarks: 6
+
+Global total time: 00:01:50 (110.64 sec), executed benchmarks: 6
