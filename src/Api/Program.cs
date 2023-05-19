@@ -13,7 +13,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddMapping();
 builder.Services.AddProviders();
 builder.Services.AddJwtTokenAuthentication(builder.Configuration);
-builder.Services.AddWordFrequencyAnalyzers();
 builder.Services.AddCqrsHandlers();
 builder.Services.AddVersioning();
 builder.Services.ConfigureRoutes();

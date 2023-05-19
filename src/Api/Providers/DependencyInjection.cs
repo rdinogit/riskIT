@@ -4,6 +4,8 @@ using Api.Providers.TimeDate;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using WordAnalyzer.Factories;
+using WordAnalyzer.Providers;
 
 namespace Api.Providers
 {
@@ -12,6 +14,9 @@ namespace Api.Providers
         public static IServiceCollection AddProviders(this IServiceCollection services)
         {
             services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
+            services.AddScoped<IWordFrequencyFactory, WordFrequencyFactory>();
+            services.AddScoped<IWordFrequencyAnalyzerRegex, WordFrequencyAnalyzerRegexProvider>();
+            services.AddScoped<IWordFrequencyAnalyzerString, WordFrequencyAnalyzerStringProvider>();
             return services;
         }
 
