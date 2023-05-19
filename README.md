@@ -31,7 +31,7 @@ To expose the functionality offered by `IWordFrequencyAnalyzer`, 3 example appro
 2. `RegexAnalyzersController` - A CQRS based approach where only the `regular expressions` based functionality is exposed.
 3. `StringAnalyzersController` - A CQRS based approach where only the `string manipulation` based functionality is exposed.
 
-The [discussion](#discussion) section expands on thoughts about each of the approaches.
+The [discussion section](#discussion) expands on thoughts about each of the approaches.
 
 **Remarks:**
 
