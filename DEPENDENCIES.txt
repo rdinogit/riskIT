@@ -1,0 +1,30 @@
+Project 'WordAnalyzer' has the following package references
+   [net7.0]: No packages were found for this framework.
+   
+Project 'WordAnalyzer.Tests' has the following package references
+   [net7.0]:
+   Top-level Package                Requested   Resolved
+   > AutoFixture                    4.18.0      4.18.0
+   > coverlet.collector             3.2.0       3.2.0
+   > Microsoft.NET.Test.Sdk         17.5.0      17.5.0
+   > Moq                            4.18.4      4.18.4
+   > xunit                          2.4.2       2.4.2
+   > xunit.runner.visualstudio      2.4.5       2.4.5
+
+Project 'WordAnalyzer.Benchmark' has the following package references
+   [net7.0]:
+   Top-level Package      Requested   Resolved
+   > BenchmarkDotNet      0.13.5      0.13.5
+   > Bogus                34.0.2      34.0.2
+
+Project 'Api' has the following package references
+   [net7.0]:
+   Top-level Package                                            Requested   Resolved
+   > FluentValidation.DependencyInjectionExtensions             11.5.2      11.5.2
+   > Mapster.DependencyInjection                                1.0.0       1.0.0
+   > MediatR                                                    12.0.1      12.0.1
+   > Microsoft.AspNetCore.Authentication.JwtBearer              7.0.5       7.0.5
+   > Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer            5.0.0       5.0.0
+   > Microsoft.AspNetCore.OpenApi                               7.0.5       7.0.5
+   > Microsoft.VisualStudio.Azure.Containers.Tools.Targets      1.17.2      1.17.2
+   > Swashbuckle.AspNetCore                                     6.4.0       6.4.0
