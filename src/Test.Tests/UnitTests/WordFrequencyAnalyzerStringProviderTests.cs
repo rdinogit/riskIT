@@ -1,15 +1,15 @@
-using AutoFixture;
+﻿using AutoFixture;
 using Moq;
-using WordAnalyzer.Exceptions;
-using WordAnalyzer.Factories;
-using WordAnalyzer.Interfaces;
-using WordAnalyzer.Providers;
+using Test.Exceptions;
+using Test.Factories;
+using Test.Interfaces;
+using Test.Providers;
 
-namespace WordAnalyzer.Tests.UnitTests
+namespace Test.Tests.UnitTests
 {
-    public class WordFrequencyAnalyzerRegexProviderTests
+    public class WordFrequencyAnalyzerStringProviderTests
     {
-        public class WordFrequencyAnalyzerRegexProviderTestsCustomization : ICustomization
+        public class WordFrequencyAnalyzerStringProviderTestsCustomization : ICustomization
         {
             public void Customize(IFixture fixture)
             {
@@ -53,7 +53,7 @@ namespace WordAnalyzer.Tests.UnitTests
         {
             // Arrange
             var wordFrequencyFactory = new Mock<IWordFrequencyFactory>();
-            var sut = new WordFrequencyAnalyzerRegexProvider(wordFrequencyFactory.Object);
+            var sut = new WordFrequencyAnalyzerStringProvider(wordFrequencyFactory.Object);
 
             // Act
             var result = sut.CalculateHighestFrequency(input);
@@ -69,7 +69,7 @@ namespace WordAnalyzer.Tests.UnitTests
         {
             // Arrange
             var wordFrequencyFactory = new Mock<IWordFrequencyFactory>();
-            var sut = new WordFrequencyAnalyzerRegexProvider(wordFrequencyFactory.Object);
+            var sut = new WordFrequencyAnalyzerStringProvider(wordFrequencyFactory.Object);
 
             // Act
             var result = sut.CalculateHighestFrequency(input);
@@ -85,7 +85,7 @@ namespace WordAnalyzer.Tests.UnitTests
         {
             // Arrange
             var wordFrequencyFactory = new Mock<IWordFrequencyFactory>();
-            var sut = new WordFrequencyAnalyzerRegexProvider(wordFrequencyFactory.Object);
+            var sut = new WordFrequencyAnalyzerStringProvider(wordFrequencyFactory.Object);
 
             // Act
             var result = sut.CalculateFrequencyForWord(input, "word");
@@ -98,12 +98,12 @@ namespace WordAnalyzer.Tests.UnitTests
         [InlineData("")]
         [InlineData(" ")]
         [InlineData("!")]
-        [InlineData("�")]
+        [InlineData("â")]
         public void CalculateFrequencyForWord_GivenInvalidWords_ShouldThrowInvalidWordException(string word)
         {
             // Arrange
             var wordFrequencyFactory = new Mock<IWordFrequencyFactory>();
-            var sut = new WordFrequencyAnalyzerRegexProvider(wordFrequencyFactory.Object);
+            var sut = new WordFrequencyAnalyzerStringProvider(wordFrequencyFactory.Object);
 
             // Act and Assert
             Assert.Throws<InvalidWordException>(() => sut.CalculateFrequencyForWord("anything", word));
@@ -121,7 +121,7 @@ namespace WordAnalyzer.Tests.UnitTests
         {
             // Arrange
             var wordFrequencyFactory = new Mock<IWordFrequencyFactory>();
-            var sut = new WordFrequencyAnalyzerRegexProvider(wordFrequencyFactory.Object);
+            var sut = new WordFrequencyAnalyzerStringProvider(wordFrequencyFactory.Object);
 
             // Act
             var result = sut.CalculateFrequencyForWord(input, word);
@@ -136,7 +136,7 @@ namespace WordAnalyzer.Tests.UnitTests
         {
             // Arrange
             var fixture = new Fixture();
-            fixture.Customize(new WordFrequencyAnalyzerRegexProviderTestsCustomization());
+            fixture.Customize(new WordFrequencyAnalyzerStringProviderTestsCustomization());
 
             var input = "foo bar";
             var numberOfWords = 2;
@@ -146,7 +146,7 @@ namespace WordAnalyzer.Tests.UnitTests
                 WordFrequency.Define("bar", 1)
             };
 
-            var sut = new WordFrequencyAnalyzerRegexProvider(wordFrequencyFactory);
+            var sut = new WordFrequencyAnalyzerStringProvider(wordFrequencyFactory);
 
             // Act
             var result = sut.CalculateMostFrequentNWords(input, numberOfWords);
@@ -160,7 +160,7 @@ namespace WordAnalyzer.Tests.UnitTests
         {
             // Arrange
             var fixture = new Fixture();
-            fixture.Customize(new WordFrequencyAnalyzerRegexProviderTestsCustomization());
+            fixture.Customize(new WordFrequencyAnalyzerStringProviderTestsCustomization());
 
             var input = "foo foo bar bar";
             var numberOfWords = 2;
@@ -170,7 +170,7 @@ namespace WordAnalyzer.Tests.UnitTests
                 WordFrequency.Define("bar", 2)
             };
 
-            var sut = new WordFrequencyAnalyzerRegexProvider(wordFrequencyFactory);
+            var sut = new WordFrequencyAnalyzerStringProvider(wordFrequencyFactory);
 
             // Act
             var result = sut.CalculateMostFrequentNWords(input, numberOfWords);
@@ -184,7 +184,7 @@ namespace WordAnalyzer.Tests.UnitTests
         {
             // Arrange
             var fixture = new Fixture();
-            fixture.Customize(new WordFrequencyAnalyzerRegexProviderTestsCustomization());
+            fixture.Customize(new WordFrequencyAnalyzerStringProviderTestsCustomization());
 
             var input = "foo foobar bar";
             var numberOfWords = 4;
@@ -195,7 +195,7 @@ namespace WordAnalyzer.Tests.UnitTests
                 WordFrequency.Define("bar", 1)
             };
 
-            var sut = new WordFrequencyAnalyzerRegexProvider(wordFrequencyFactory);
+            var sut = new WordFrequencyAnalyzerStringProvider(wordFrequencyFactory);
 
             // Act
             var result = sut.CalculateMostFrequentNWords(input, numberOfWords);
@@ -209,7 +209,7 @@ namespace WordAnalyzer.Tests.UnitTests
         {
             // Arrange
             var fixture = new Fixture();
-            fixture.Customize(new WordFrequencyAnalyzerRegexProviderTestsCustomization());
+            fixture.Customize(new WordFrequencyAnalyzerStringProviderTestsCustomization());
 
             var input = "foo";
             var numberOfWords = 2;
@@ -218,7 +218,7 @@ namespace WordAnalyzer.Tests.UnitTests
                 WordFrequency.Define("foo", 1)
             };
 
-            var sut = new WordFrequencyAnalyzerRegexProvider(wordFrequencyFactory);
+            var sut = new WordFrequencyAnalyzerStringProvider(wordFrequencyFactory);
 
             // Act
             var result = sut.CalculateMostFrequentNWords(input, numberOfWords);
@@ -232,14 +232,14 @@ namespace WordAnalyzer.Tests.UnitTests
         {
             // Arrange
             var fixture = new Fixture();
-            fixture.Customize(new WordFrequencyAnalyzerRegexProviderTestsCustomization());
+            fixture.Customize(new WordFrequencyAnalyzerStringProviderTestsCustomization());
 
             var input = "foo";
             var numberOfWords = 0;
             var wordFrequencyFactory = fixture.Create<IWordFrequencyFactory>();
             var expectedResults = new List<IWordFrequency>();
 
-            var sut = new WordFrequencyAnalyzerRegexProvider(wordFrequencyFactory);
+            var sut = new WordFrequencyAnalyzerStringProvider(wordFrequencyFactory);
 
             // Act
             var result = sut.CalculateMostFrequentNWords(input, numberOfWords);
@@ -253,14 +253,14 @@ namespace WordAnalyzer.Tests.UnitTests
         {
             // Arrange
             var fixture = new Fixture();
-            fixture.Customize(new WordFrequencyAnalyzerRegexProviderTestsCustomization());
+            fixture.Customize(new WordFrequencyAnalyzerStringProviderTestsCustomization());
 
             var input = "foo";
             var numberOfWords = -1;
             var wordFrequencyFactory = fixture.Create<IWordFrequencyFactory>();
             var expectedResults = new List<IWordFrequency>();
 
-            var sut = new WordFrequencyAnalyzerRegexProvider(wordFrequencyFactory);
+            var sut = new WordFrequencyAnalyzerStringProvider(wordFrequencyFactory);
 
             // Act
             var result = sut.CalculateMostFrequentNWords(input, numberOfWords);

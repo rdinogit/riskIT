@@ -1,7 +1,7 @@
-﻿using WordAnalyzer.Interfaces;
-using WordAnalyzer.Models;
+﻿using Test.Interfaces;
+using Test.Models;
 
-namespace WordAnalyzer
+namespace Test
 {
     public class WordFrequency : ValueObject, IWordFrequency
     {

@@ -1,6 +1,6 @@
 ﻿using MediatR;
-using WordAnalyzer.Interfaces;
-using WordAnalyzer.Providers;
+using Test.Interfaces;
+using Test.Providers;
 using static Api.CQRS.WordFrequency.StringAnalyzer.Queries.CalculateMostFrequentWords.CalculateMostFrequentWordsResponse;
 
 namespace Api.CQRS.WordFrequency.StringAnalyzer.Queries.CalculateMostFrequentWords

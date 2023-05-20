@@ -1,9 +1,9 @@
-﻿using WordAnalyzer.Exceptions;
-using WordAnalyzer.Extensions;
-using WordAnalyzer.Factories;
-using WordAnalyzer.Interfaces;
+﻿using Test.Exceptions;
+using Test.Extensions;
+using Test.Factories;
+using Test.Interfaces;
 
-namespace WordAnalyzer.Providers
+namespace Test.Providers
 {
     public class WordFrequencyAnalyzerStringProvider : IWordFrequencyAnalyzerString
     {

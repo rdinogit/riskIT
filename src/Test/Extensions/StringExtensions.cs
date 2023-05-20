@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace WordAnalyzer.Extensions
+namespace Test.Extensions
 {
     public static class StringExtensions
     {

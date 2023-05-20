@@ -4,8 +4,8 @@ using Api.Providers.TimeDate;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using WordAnalyzer.Factories;
-using WordAnalyzer.Providers;
+using Test.Factories;
+using Test.Providers;
 
 namespace Api.Providers
 {

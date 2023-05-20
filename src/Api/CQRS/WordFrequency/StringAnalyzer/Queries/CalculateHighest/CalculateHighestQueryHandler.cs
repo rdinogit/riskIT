@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using WordAnalyzer.Providers;
+using Test.Providers;
 
 namespace Api.CQRS.WordFrequency.StringAnalyzer.Queries.CalculateHighest
 {

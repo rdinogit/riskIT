@@ -4,7 +4,7 @@ using Api.Filters;
 using Api.Mapping;
 using Api.Providers;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
-using WordAnalyzer;
+using Test;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,4 +1,4 @@
-﻿namespace WordAnalyzer.Models
+﻿namespace Test.Models
 {
     public abstract class ValueObject : IEquatable<ValueObject>
     {

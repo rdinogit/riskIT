@@ -2,9 +2,9 @@
 May 2023  
 Ruben Bernardino
 
-**The proposed solution to the use case is presented in the `WordAnalyzer` project and its corresponding `WordAnalyzer.Tests` project. The relevant classes are `WordFrequencyAnalyzerStringProvider` and `WordFrequencyAnalyzerRegexProvider`.**
+**The proposed solution to the use case is presented in the `Test` project and its corresponding `Test.Tests` project. The relevant classes are `WordFrequencyAnalyzerStringProvider` and `WordFrequencyAnalyzerRegexProvider`.**
 
-**Additionally, a showcase project `Api` and a Benchmark project `WordAnalyzer.Benchmark` are included and do not interfere with the proposed use case solution.**
+**Additionally, a showcase project `Api` and a Benchmark project `Test.Benchmark` are included and do not interfere with the proposed use case solution.**
 
 ## Word Analyzer Library
 
@@ -17,7 +17,7 @@ As it will be explained in the [api showcase section](#api-showcase), separate i
 
 The `IWordFrequencyFactory` was introduced to allow modification of the implementation for `IWordFrequency` without impacting the several `IWordFrequencyAnalyzer` implementations.
 
-A `WordAnalyzer.Benchmark` project and a set of results from a comparison between Analyzers were also included but are not necessary to respond to the problem.
+A `Test.Benchmark` project and a set of results from a comparison between Analyzers were also included but are not necessary to respond to the problem.
 
 ## API Showcase
 
@@ -53,13 +53,13 @@ In order to comply with the requirement:
 containing the interface defined in the same namespace (i.e. into the one we have waiting 
 for the code already)*
 
-The relevant interfaces `IWordFrequency` and `IWordFrequencyAnalyzer` and corresponding implementations had to be defined in the `WordAnalyzer` project, allowing it to be used at discretion as a single package.
+The relevant interfaces `IWordFrequency` and `IWordFrequencyAnalyzer` and corresponding implementations had to be defined in the `Test` project, allowing it to be used at discretion as a single package.
 
 Regarding DDD, the use case is simple enough to make the use of a `Domain` definition unjustified. Nothing in the context of the use case stands out as an `Entity`. However, `WordFrequency` is presented as an example of a `ValueObject`. 
 
 A Clean Architecture showcase was considered and would have been implemented if it were not for the mentioned requirement, and the simplicity of the use case. To achieve it, one could consider a scenario where `IWordFrequency` and its implementation are defined in a `Domain` layer. The `IWordFrequencyAnalyzer` and the CQRS handlers would be defined in a `Application` layer. The implementation of `IWordFrequencyAnalyzer` would be a concern of a `Infrastructure` layer.
 
-Looking at the current solution structure and based on the previous statements, `WordAnalyzer` could be spread throughout `Domain`, `Application` and `Infrastructure` and the chain of dependencies would be defined as:
+Looking at the current solution structure and based on the previous statements, `Test` could be spread throughout `Domain`, `Application` and `Infrastructure` and the chain of dependencies would be defined as:
 
 `Api <--depends on-- Infrastructure <--depends on-- Application <--depends on-- Domain`
 

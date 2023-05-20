@@ -1,9 +1,9 @@
-﻿using WordAnalyzer.Exceptions;
-using WordAnalyzer.Factories;
-using WordAnalyzer.Interfaces;
+﻿using Test.Exceptions;
+using Test.Factories;
+using Test.Interfaces;
 using System.Text.RegularExpressions;
 
-namespace WordAnalyzer.Providers
+namespace Test.Providers
 {
     public partial class WordFrequencyAnalyzerRegexProvider : IWordFrequencyAnalyzerRegex
     {

@@ -1,6 +1,6 @@
-﻿using WordAnalyzer.Factories;
+﻿using Test.Factories;
 
-namespace WordAnalyzer.Tests.UnitTests
+namespace Test.Tests.UnitTests
 {
     public class WordFrequencyFactoryTests
     {

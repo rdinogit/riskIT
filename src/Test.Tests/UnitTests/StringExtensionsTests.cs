@@ -1,6 +1,6 @@
-﻿using WordAnalyzer.Extensions;
+﻿using Test.Extensions;
 
-namespace WordAnalyzer.Tests.UnitTests
+namespace Test.Tests.UnitTests
 {
     public class StringExtensionsTests
     {

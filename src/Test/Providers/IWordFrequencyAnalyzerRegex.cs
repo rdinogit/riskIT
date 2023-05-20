@@ -1,6 +1,6 @@
-﻿using WordAnalyzer.Interfaces;
+﻿using Test.Interfaces;
 
-namespace WordAnalyzer.Providers
+namespace Test.Providers
 {
     public interface IWordFrequencyAnalyzerRegex : IWordFrequencyAnalyzer
     {

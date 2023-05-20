@@ -1,6 +1,6 @@
-﻿using WordAnalyzer.Interfaces;
+﻿using Test.Interfaces;
 
-namespace WordAnalyzer.Factories
+namespace Test.Factories
 {
     public class WordFrequencyFactory : IWordFrequencyFactory
     {

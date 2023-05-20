@@ -1,10 +1,10 @@
 ﻿using BenchmarkDotNet.Attributes;
 using Bogus;
-using WordAnalyzer.Factories;
-using WordAnalyzer.Interfaces;
-using WordAnalyzer.Providers;
+using Test.Factories;
+using Test.Interfaces;
+using Test.Providers;
 
-namespace WordAnalyzer.Benchmark
+namespace Test.Benchmark
 {
     public class WordFrequencyAnalyzerRegexProviderVsWordFrequencyAnalyzerStringProvider
     {

@@ -1,5 +1,5 @@
 ﻿
 using BenchmarkDotNet.Running;
-using WordAnalyzer.Benchmark;
+using Test.Benchmark;
 
 var summary = BenchmarkRunner.Run<WordFrequencyAnalyzerRegexProviderVsWordFrequencyAnalyzerStringProvider>();

@@ -2,8 +2,8 @@ using Api.Contract;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Mime;
-using WordAnalyzer.Interfaces;
-using WordAnalyzer.Providers;
+using Test.Interfaces;
+using Test.Providers;
 
 namespace Api.Controllers
 {

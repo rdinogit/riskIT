@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using WordAnalyzer.Exceptions;
+using Test.Exceptions;
 
 namespace Api.Filters
 {

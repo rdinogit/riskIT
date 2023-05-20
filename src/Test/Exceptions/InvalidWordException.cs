@@ -1,4 +1,4 @@
-﻿namespace WordAnalyzer.Exceptions
+﻿namespace Test.Exceptions
 {
     public class InvalidWordException : Exception
     {
