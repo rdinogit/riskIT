@@ -8,7 +8,9 @@ Ruben Bernardino
 
 ## Word Analyzer Library
 
-Two approaches were implemented for the problem:
+The `Test` project hold the word analyzer library.
+
+Two approaches were implemented to address the problem:
 
 - a `regular expressions` based solution
 - a `string manipulation` based solution
