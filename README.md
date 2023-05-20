@@ -12,8 +12,8 @@ The `Test` project hold the word analyzer library.
 
 Two approaches were implemented to address the problem:
 
-- a `regular expressions` based solution
-- a `string manipulation` based solution
+- a `regular expressions` based
+- a `string manipulation` based
 
 As it will be explained in the [api showcase section](#api-showcase), separate interfaces were created to facilitate showcases (i.e. so one or the other could be injected without the need to change configuration).
 
