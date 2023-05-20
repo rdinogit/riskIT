@@ -15,7 +15,7 @@ Two approaches were implemented for the problem:
 
 As it will be explained in the [api showcase section](#api-showcase), separate interfaces were created to facilitate showcases (i.e. so one or the other could be injected without the need to change configuration).
 
-The `IWordFrequencyFactory` was introduced to allow modification of the implementation for `IWordFrequency` without impacting the several `IWordFrequencyAnalyzer` implementations.
+The `IWordFrequencyFactory` was introduced to enable modification of `IWordFrequency` implementations without impacting the several `IWordFrequencyAnalyzer` implementations.
 
 A `Test.Benchmark` project and a set of results from a comparison between Analyzers were also included but are not necessary to respond to the problem.
 
