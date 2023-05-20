@@ -23,8 +23,6 @@ A `WordAnalyzer.Benchmark` project and a set of results from a comparison betwee
 
 Although the mentioned Libraries would suffice to solve the Test, a showcase through the `Api` project was composed.
 
-A convenient `Dockerfile` is also provided.
-
 To expose the functionality offered by `IWordFrequencyAnalyzer`, 3 example approaches are presented:
 
 1. `WordFrequenciesController` - A simple approach where the logic is executed mostly at the `Controller` level.
