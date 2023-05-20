@@ -32,11 +32,11 @@ namespace Api.Controllers
         /// </summary>
         /// <param name="request"></param>
         /// <returns>The highest word frequency value found.</returns>
-        [HttpPost("regex/highest")]
+        [HttpGet("regex/highest")]
         [Produces(MediaTypeNames.Text.Plain)]
         [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult PostRegexCalculateHighest(CalculateHighestRequest request)
+        public IActionResult GetRegexCalculateHighest([FromQuery]CalculateHighestRequest request)
         {
             var result = _regexAnalyzer.CalculateHighestFrequency(request.Text);
             return Ok(result.ToString());
@@ -47,11 +47,11 @@ namespace Api.Controllers
         /// </summary>
         /// <param name="request"></param>
         /// <returns>The word frequency value for the specified word.</returns>
-        [HttpPost("regex/word")]
+        [HttpGet("regex/word")]
         [Produces(MediaTypeNames.Text.Plain)]
         [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult PostRegexCalculateForWord(CalculateForWordRequest request)
+        public IActionResult GetRegexCalculateForWord([FromQuery]CalculateForWordRequest request)
         {
             var result = _regexAnalyzer.CalculateFrequencyForWord(request.Text, request.Word);
             return Ok(result.ToString());
@@ -62,11 +62,11 @@ namespace Api.Controllers
         /// </summary>
         /// <param name="request"></param>
         /// <returns>A specified number of most frequent words.</returns>
-        [HttpPost("regex/words")]
+        [HttpGet("regex/words")]
         [Produces(MediaTypeNames.Application.Json)]
         [ProducesResponseType(typeof(IList<IWordFrequency>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult PostRegexCalculateForWords(CalculateForWordsRequest request)
+        public IActionResult GetRegexCalculateForWords([FromQuery] CalculateForWordsRequest request)
         {
             var result = _regexAnalyzer.CalculateMostFrequentNWords(request.Text, request.NumberOfWords);
             return Ok(result);
@@ -77,11 +77,11 @@ namespace Api.Controllers
         /// </summary>
         /// <param name="request"></param>
         /// <returns>The highest word frequency value found.</returns>
-        [HttpPost("string/highest")]
+        [HttpGet("string/highest")]
         [Produces(MediaTypeNames.Text.Plain)]
         [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult PostStringCalculateHighest(CalculateHighestRequest request)
+        public IActionResult GetStringCalculateHighest([FromQuery] CalculateHighestRequest request)
         {
             var result = _stringAnalyzer.CalculateHighestFrequency(request.Text);
             return Ok(result.ToString());
@@ -92,11 +92,11 @@ namespace Api.Controllers
         /// </summary>
         /// <param name="request"></param>
         /// <returns>The word frequency value for the specified word.</returns>
-        [HttpPost("string/word")]
+        [HttpGet("string/word")]
         [Produces(MediaTypeNames.Text.Plain)]
         [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult PostStringCalculateForWord(CalculateForWordRequest request)
+        public IActionResult GetStringCalculateForWord([FromQuery] CalculateForWordRequest request)
         {
             var result = _stringAnalyzer.CalculateFrequencyForWord(request.Text, request.Word);
             return Ok(result.ToString());
@@ -107,11 +107,11 @@ namespace Api.Controllers
         /// </summary>
         /// <param name="request"></param>
         /// <returns>A specified number of most frequent words.</returns>
-        [HttpPost("string/words")]
+        [HttpGet("string/words")]
         [Produces(MediaTypeNames.Application.Json)]
         [ProducesResponseType(typeof(IList<IWordFrequency>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult PostStringCalculateForWords(CalculateForWordsRequest request)
+        public IActionResult GetStringCalculateForWords([FromQuery] CalculateForWordsRequest request)
         {
             var result = _stringAnalyzer.CalculateMostFrequentNWords(request.Text, request.NumberOfWords);
             return Ok(result);

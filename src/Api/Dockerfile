@@ -9,7 +9,6 @@ FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["Api/Api.csproj", "Api/"]
 COPY ["WordAnalyzer/WordAnalyzer.csproj", "WordAnalyzer/"]
-COPY ["WordAnalyzer.Tests/WordAnalyzer.Tests.csproj", "WordAnalyzer.Tests/"]
 RUN dotnet restore "Api/Api.csproj"
 COPY . .
 WORKDIR "/src/Api"
